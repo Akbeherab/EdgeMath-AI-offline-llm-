@@ -51,3 +51,42 @@ EdgeMath AI leverages a quantized LLM (Phi-2) optimized with Llama.cpp:
 ### Step 1: Update Raspberry Pi
 ```bash
 sudo apt update && sudo apt upgrade -y
+## Installation
+###  Install Dependencies
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install python3-pip -y
+pip3 install llama-cpp-python sympy numpy
+```
+
+###  Download AI Model (Quantized)
+```bash
+wget https://huggingface.co/TheBloke/Phi-2-GGUF/resolve/main/phi-2.Q4_K_M.gguf
+```
+
+### Run the math_Solve.py
+
+## Performance
+### Results
+| Metric | Value |
+|--------|--------|
+| **Inference Time** | ~10-20s per query (varies by complexity) |
+| **Total Processing Time** | ~80-100s for 200 tokens |
+| **Power Consumption** | ~30% lower compared to unoptimized models |
+| **Accuracy** | Reliable for Class 10th-level math (algebra, geometry, linear equations) |
+
+## Potential Applications
+- **Education:** Offline math tutoring in remote schools.
+- **Defense:** Portable computation tool for field engineers.
+- **Rural Development:** Math solver for areas without internet.
+
+## Future Enhancements
+- Add **geometry & trigonometry** problem-solving.
+- Integrate a **web-based UI** using Flask/FastAPI.
+- Optimize response time with **tensor acceleration**.
+- Extend support for **Raspberry Pi 3 & other low-end devices and jetsonano NVIDIA**.
+
+## Contributing
+Contributions are welcome! **Fork the repo, make changes, and submit a pull request.** Open an issue for major updates.
+
+---
